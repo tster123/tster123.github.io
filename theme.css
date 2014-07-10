@@ -1,4 +1,3 @@
-@import url("uniform.utopia.css");
 
 /*
 FOLLOW THIS FORMAT:
@@ -14,28 +13,34 @@ FOLLOW THIS FORMAT:
 }
 */
 
-@font-face {
-    font-family: 'KnightsQuestRegular';
-    src: url('./fonts/knights-webfont.eot');
-    src: url('./fonts/knights-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./fonts/knights-webfont.woff') format('woff'),
-         url('./fonts/knights-webfont.ttf') format('truetype'),
-         url('./fonts/knights-webfont.svg#KnightsQuestRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+
+
+
+.game-content p
+{
+	font-size: 0;
+	margin: 0;
 }
 
+.game-content p a
+{
+	display: block;
+	font-size: 13px;
+}
+
+
+
+
 body {
-    color: white;
+    color: #FFFFFE;
     font-family: 'Trebuchet MS', Helvetica, sans-serif;
     background-color: black;
 }
 
-
 #header-logo {
     background: url(./images/logo_header.png) no-repeat top left;
-    width: 243px;
-    height: 49px;
+    width: 183px;
+    height: 50px;
     position: absolute;
 }
 
@@ -49,35 +54,18 @@ body {
 
     /* internal styling - padding etc. */
 
-    /* typography */
-    font-family: KnightsQuestRegular;
-    font-size: 20px;
+     /* typography */
+    font-size: 16px;
     font-weight: normal;
     text-align: left;
 
-    -moz-text-shadow: -1px 1px 2px #000, 1px -1px 2px #ffcf68;
-    -webkit-text-shadow: -1px 1px 2px #000, 1px -1px 2px #ffcf68;
-    text-shadow: -1px 1px 2px #000, 1px -1px 1px #ffcf68;
-    filter: glow(color=#252525,strength=3);
-
     /* colors */
-    border-color: #555555;
-    -moz-box-shadow: 1px -1px 2px 0px #fffbf1, inset 0px 0px 6px #000;
-    -webkit-box-shadow: 1px -1px 2px 0px #fffbf1, inset 0px 0px 6px #000;
-    box-shadow: 1px -1px 2px 0px #fffbf1, inset 0px 0px 6px #000;
-
-    background: #494432; /* Old browsers */
-    background: -moz-radial-gradient(center, ellipse cover,  #7b7354 0%, #29261c 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#7b7354), color-stop(100%,#29261c)); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  #7b7354 0%,#29261c 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  #7b7354 0%,#29261c 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  #7b7354 0%,#29261c 100%); /* IE10+ */
-    background: radial-gradient(center, ellipse cover,  #7b7354 0%,#29261c 100%); /* W3C */
+    border-color: #103041;
 }
 
 .navigation a {
     text-decoration: none;
-    color: #fff;
+    color: silver;
 }
 
 .navigation a:hover  {
@@ -86,43 +74,44 @@ body {
 }
 
 #header-navigation div {
-    /* display, opacity and special effects */
-    opacity:0.7;
-    filter:alpha(opacity=70); /* For IE8 and earlier */
+
+}
+
+#header-navigation div:hover a  {
+    /* colors */
+    color: white;
+    text-decoration: none;
 }
 
 #header-navigation div:hover {
+    /* colors */
+    background: #103041;
+
     /* display, opacity and special effects */
-    opacity:1.0;
-    filter:alpha(opacity=100); /* For IE8 and earlier */
     -moz-box-shadow: 1px -1px 2px 0px #fffbf1, inset 0px 0px 4px #7c4a14, 0px 8px 10px -6px #fff;;
     -webkit-box-shadow: 1px -1px 2px 0px #fffbf1, inset 0px 0px 4px #7c4a14, 0px 8px 10px -6px #fff;;
     box-shadow: 1px -1px 2px 0px #fffbf1, inset 0px 0px 6px #000, 0px -8px 8px -6px #fff;
-
 }
 
 #account-container {
-    font-family: KnightsQuestRegular;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 #account-header .account-image {
     background: url(./images/anonymous_small.png) no-repeat top left;
 }
 
-#account-header
-{
-    color: #edf2fd;
+#account-header {
 }
 
 #account-header:hover
 {
-    background-color: #494432;
+    background-color: #103041;
 }
 
 #account-header.selected
 {
-    background-color: #494432;
+    background-color: #103041;
 }
 
 #account-details
@@ -130,67 +119,59 @@ body {
     font-size: 12px;
     font-family: 'Trebuchet MS', Helvetica, sans-serif;
     line-height: 16px;
-    background-color: #494432;
+    background-color: black;
 }
 
 #account-details .account-title
 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bolder;
-    font-family: KnightsQuestRegular;
-    border-bottom: 1px solid #29261c;
-    -moz-box-shadow: 0px 2px 1px -1px #7b7354;
-    -webkit-box-shadow: 0px 2px 1px -1px #7b7354;
-    box-shadow: 0px 2px 1px -1px #7b7354;
-
+    border-bottom: 1px solid #103041;
+    -moz-box-shadow: 0px 2px 1px -1px #103041;
+    -webkit-box-shadow: 0px 2px 1px -1px #103041;
+    box-shadow: 0px 2px 1px -1px #103041;
 }
 
 #account-details .alert a {
     color: #ff771c;
-    text-shadow: -1px 1px 2px black;
 }
 
 #account-details a:hover {
     box-shadow: -10px 0px 6px -6px #fff;
-
 }
 
 #account-details .account-summary {
     /* internal styling - padding etc. */
-    border-bottom: 1px solid #29261c;
-    -moz-box-shadow: 0px 2px 1px -1px #7b7354;
-    -webkit-box-shadow: 0px 2px 1px -1px #7b7354;
-    box-shadow: 0px 2px 1px -1px #7b7354;
-
+    border-bottom: 1px solid #103041;
+    -moz-box-shadow: 0px 2px 1px -1px #103041;
+    -webkit-box-shadow: 0px 2px 1px -1px #103041;
+    box-shadow: 0px 2px 1px -1px #103041;
 }
 
 #account-details .account-signout
 {
-    border-top: 1px solid #29261c;
-    -moz-box-shadow: inset 0px 2px 1px -1px #7b7354;
-    -webkit-box-shadow: inset 0px 2px 1px -1px #7b7354;
-    box-shadow: inset 0px 2px 1px -1px #7b7354;
+    border-top: 1px solid #103041;
+    -moz-box-shadow: inset 0px 2px 1px -1px #103041;
+    -webkit-box-shadow: inset 0px 2px 1px -1px #103041;
+    box-shadow: inset 0px 2px 1px -1px #103041;
     font-weight: bold;
     text-align: right;
-
 }
 
 #middle {
     /* positioning and size */
     /* border styling */
     /* internal styling - padding etc. */
-    background-image: url(./images/leather.jpg);
-    background-repeat: repeat-y;
-    background-position: top left;
+    background-image: url(./images/bk.jpg);
+    background-repeat: no-repeat;
+    background-position: center 200px;
     /* typography */
     /* colors */
     /* display, opacity and special effects */
-    box-shadow: 3px -3px 5px #191919, -10px 10px 10px #000;
-
 }
 
 a {
-    color: #e5c40f;
+    color: #45ACF6;
     text-decoration: none;
 }
 
@@ -198,26 +179,16 @@ a.highlighted {
     color: #E68910;
 }
 
-a.info-link {
-    font-family: 'Trebuchet MS', Helvetica, sans-serif;
-    font-size: 14px;
-}
-
 a:focus,
 a:hover {
-    color: #fff;
+    text-decoration: underline;
 }
 
 h1,
 h2,
 h3 {
-    font-family: KnightsQuestRegular;
-    font-weight: 200;
-    color: #fff;
-    -moz-text-shadow: -1px 1px 2px #000;
-    -webkit-text-shadow: -1px 1px 2px #000;
-    text-shadow: -1px 1px 2px #000;
-    filter: glow(color=#252525,strength=3);
+    color: silver;
+    font-weight: normal;
 }
 
 #footer {
@@ -226,11 +197,10 @@ h3 {
 }
 
 .report-this {
-    color: #c4a112;
+    color: #45ACF6;
     background-color: #18100e;
     border-bottom-left-radius: 8px 8px;
     -moz-border-radius-bottomleft: 8px 8px;
-
 
     -moz-box-shadow: 0px 3px 4px #000;
     -webkit-box-shadow: 0px 3px 4px #000;
@@ -239,11 +209,10 @@ h3 {
     -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=180, Color='#000000')";
     /* For IE 5.5 - 7 */
     filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=180, Color='#000000');
-
 }
 
 .report-this:hover {
-    color: #c4a112;
+    color: #7fc3f3;
     background-color: #2a201d;
 }
 
@@ -259,7 +228,6 @@ h3 {
     box-shadow:0 0 90px 5px #000;
     -moz-box-shadow:0 0 90px 5px #000;
     -webkit-box-shadow: 0 0 90px #000;
-
 }
 
 .overlay .close
@@ -276,13 +244,9 @@ h3 {
     -moz-border-radius: 12px;
     -webkit-border-radius: 12px;
 
-
     /* internal styling - padding etc. */
 
     /* typography */
-    -moz-text-shadow: -1px 1px 2px #000, 1px -1px 2px #ffcf68;
-    -webkit-text-shadow: -1px 1px 2px #000, 1px -1px 2px #ffcf68;
-    text-shadow: -1px 1px 2px #000, 1px -1px 1px #ffcf68;
 
     /* colors */
     border-color: #555555;
@@ -290,176 +254,106 @@ h3 {
     -webkit-box-shadow: 1px -1px 2px 0px #fffbf1, inset 0px 0px 6px #000;
     box-shadow: 1px -1px 2px 0px #fffbf1, inset 0px 0px 6px #000;
 
-    background: #494432; /* Old browsers */
-    background: -moz-radial-gradient(center, ellipse cover,  #7b7354 0%, #29261c 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#7b7354), color-stop(100%,#29261c)); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  #7b7354 0%,#29261c 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  #7b7354 0%,#29261c 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  #7b7354 0%,#29261c 100%); /* IE10+ */
-    background: radial-gradient(center, ellipse cover,  #7b7354 0%,#29261c 100%); /* W3C */
 }
 
 .lobby-panel h1 {
-    font-size: 40px;
-    line-height: 40px;
-    color: #EBE8CD;
+    font-size: 25px;
+    line-height: 25px;
+    color: #0361CC;
+}
+.lobby-panel h1 a {
+    color: #0361CC;
 }
 
 .lobby-panel h1 a:hover {
-    color: #fff;
+
 }
 
 .divider {
-    background-image: url(./images/divider.png);
-    background-repeat: no-repeat;
-    background-position: top center;
 }
 
 .divider-small {
-    background-image: url(./images/divider-small.png);
-    background-repeat: no-repeat;
-    background-position: top center;
 }
 
 .lobby-panel table th {
-    font-family: KnightsQuestRegular;
-    font-size: 20px;
-}
-
-.lobby-panel table td {
     font-size: 14px;
 }
 
+.lobby-panel table td {
+    font-size: 12px;
+}
+
 .lobby-panel h2 {
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 24px;
 }
 
 .age-changes h3,
 .campaigns h3 {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 22px;
 }
 
 .recruitment-campaigns h1,
 .race-changes h1,
 .trait-changes h1 {
-    font-size: 40px;
-    line-height: 45px;
+    font-size: 30px;
+    line-height: 35px;
 }
 
 .race-changes h2,
 .trait-changes h2 {
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .campaigns .basic-details .campaign-summary h2{
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .campaigns .basic-details .campaign-summary .highlight-keyword{
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .good {
     color: #90ee90;
 }
-
 .bad {
-    color: #EC7566;
+    color: red;
 }
 
 .message {
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 20px;
-
-    /* border styling */
-    border: 1px solid;
-    border-radius: 8px;
-    -moz-border-radius: 8px;
-    -webkit-border-radius: 8px;
-
+    /* positioning and size */
+    border: 1px solid white;
 
     /* internal styling - padding etc. */
     /* typography */
-    font-family: KnightsQuestRegular;
-    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.5em;
 }
 
 .good.message
 {
-    color: #fefff7;
-    -moz-text-shadow: -1px 1px 2px #363a19, 1px -1px 2px #363a19;
-    -webkit-text-shadow: -1px 1px 2px #363a19, 1px -1px 2px #363a19;
-    text-shadow: -1px 1px 2px #363a19, 1px -1px 1px #363a19;
-
     /* colors */
-    border-color: #feffea;
-    -moz-box-shadow: 1px -1px 1px 0px #cbd3a9 , -1px 1px 2px #363a19, inset 0px 0px 10px #000;
-    -webkit-box-shadow: 1px -1px 1px 0px #cbd3a9 , -1px 1px 2px #363a19, inset 0px 0px 10px #000;
-    box-shadow: 1px -1px 1px 0px #cbd3a9 , -1px 1px 2px #363a19, inset 0px 0px 10px #000;
-
-    background: #718d16; /* Old browsers */
-    background: -moz-radial-gradient(center, ellipse cover,  #789316 0%, #5d7a19 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#789316 ), color-stop(100%,#5d7a19)); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  #789316  0%,#5d7a19 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  #789316  0%,#5d7a19 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  #789316  0%,#5d7a19 100%); /* IE10+ */
-    background: radial-gradient(center, ellipse cover,  #789316  0%,#5d7a19 100%); /* W3C */
-
+    background-color: green;
+    color: white;
 }
 
 .bad.message
 {
-    color: #FFFCF7;
-    -moz-text-shadow: -1px 1px 2px #331100, 1px -1px 2px #331100;
-    -webkit-text-shadow: -1px 1px 2px #331100, 1px -1px 2px #331100;
-    text-shadow: -1px 1px 2px #331100, 1px -1px 1px #331100;
-
-    /* colors */
-    border-color: #feffea;
-    -moz-box-shadow: 1px -1px 1px 0px #D3AEA9 , -1px 1px 2px #331100, inset 0px 0px 10px #000;
-    -webkit-box-shadow: 1px -1px 1px 0px #D3AEA9 , -1px 1px 2px #331100, inset 0px 0px 10px #000;
-    box-shadow: 1px -1px 1px 0px #D3AEA9 , -1px 1px 2px #331100, inset 0px 0px 10px #000;
-
-    background: #521802; /* Old browsers */
-    background: -moz-radial-gradient(center, ellipse cover, #641E04 0%, #401100 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#641E04 ), color-stop(100%,#401100)); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  #641E04  0%,#401100 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  #641E04  0%,#401100 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  #641E04  0%,#401100 100%); /* IE10+ */
-    background: radial-gradient(center, ellipse cover,  #641E04  0%,#401100 100%); /* W3C */
-
+    background-color: #400000;
+    color: white;
 }
 
 .info.message
 {
-    color: #FFFCF7;
-    -moz-text-shadow: -1px 1px 2px #362301, 1px -1px 2px #362301;
-    -webkit-text-shadow: -1px 1px 2px #362301, 1px -1px 2px #362301;
-    text-shadow: -1px 1px 2px #362301, 1px -1px 1px #362301;
-
-    /* colors */
-    border-color: #feffea;
-    -moz-box-shadow: 1px -1px 1px 0px #D4C7AF , -1px 1px 2px #362301, inset 0px 0px 10px #000;
-    -webkit-box-shadow: 1px -1px 1px 0px #D4C7AF , -1px 1px 2px #362301, inset 0px 0px 10px #000;
-    box-shadow: 1px -1px 1px 0px #D4C7AF , -1px 1px 2px #362301, inset 0px 0px 10px #000;
-
-    background: #D09734; /* Old browsers */
-    background: -moz-radial-gradient(center, ellipse cover, #D09734 0%, #594118 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#D09734 ), color-stop(100%,#594118)); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  #D09734  0%,#594118 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  #D09734  0%,#594118 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  #D09734  0%,#594118 100%); /* IE10+ */
-    background: radial-gradient(center, ellipse cover,  #D09734  0%,#594118 100%); /* W3C */
-
+    background-color: #C46500;
+    color: white;
 }
+
 
 
 /* User profile page
 -------------------------------------------------------------- */
-
 .lobby-panel .statement {
     background: url('./images/province_profile/scroll.png') no-repeat;
 }
@@ -469,7 +363,7 @@ h3 {
 }
 
 .advice-message {
-    color: #a5d387;
+    color: #F93;
 }
 
 .warning {
@@ -481,12 +375,9 @@ h3 {
 }
 
 #game-navigation .current-date {
-
-    padding: 11px 0px;
-
-    font-family: KnightsQuestRegular;
-    font-size: 16px;
-    text-shadow: -1px 1px 2px black, 1px -1px 1px #FFCF68;
+    margin-top: 5px;
+    padding: 15px 0px;
+    font-size: 13px;
 
     /* border styling */
     border: 2px solid;
@@ -494,19 +385,9 @@ h3 {
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
 
+    border-color: #103041;
 
-    border-color: #555555;
-    -moz-box-shadow: 1px -1px 2px 0px #fffbf1, inset 0px 0px 6px #000;
-    -webkit-box-shadow: 1px -1px 2px 0px #fffbf1, inset 0px 0px 6px #000;
-    box-shadow: 1px -1px 2px 0px #fffbf1, inset 0px 0px 6px #000;
-
-    background: #3a3830; /* Old browsers */
-    background: -moz-radial-gradient(center, ellipse cover,  #3a3830 0%, #23221f 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#3a3830), color-stop(100%,#23221f)); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  #3a3830 0%,#23221f 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  #3a3830 0%,#23221f 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  #3a3830 0%,#23221f 100%); /* IE10+ */
-    background: radial-gradient(center, ellipse cover,  #3a3830 0%,#23221f 100%); /* W3C */
+    background: #222526;
 }
 
 #game-navigation a {
@@ -515,250 +396,144 @@ h3 {
 
 #game-navigation a:hover {
     box-shadow: -10px 0px 6px -6px #fff;
-
 }
 
 #resource-bar
 {
     /* border styling */
-    border: 2px solid;
-    border-radius: 2px;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
+    border-collapse: separate;
+    border-spacing: 3px 3px;
 
     /* internal styling - padding etc. */
-
-    /* typography */
-    font-family: KnightsQuestRegular;
-    font-size: 14px;
-
-    -moz-text-shadow: -1px 1px 2px #000, 1px -1px 2px #ffcf68;
-    -webkit-text-shadow: -1px 1px 2px #000, 1px -1px 2px #ffcf68;
-    text-shadow: -1px 1px 2px #000, 1px -1px 1px #ffcf68;
+    padding: 3px 6px 3px 6px;
 
     /* colors */
-    border-color: #555555;
-    -moz-box-shadow:    0px -1px 1px #fffbf1,
-                                    inset 0px 1px 2px #000,
-                                    inset 0px -1px 1px #fffbf1,
-                                    0px 1px 1px #000,
-                                    -1px 0px 2px #000,
-                                    inset 1px 0px 1px #fffbf1,
-                                    inset -1px 0px 2px #000,
-                                    1px 0px 1px #fffbf1;
-    -webkit-box-shadow: 0px -1px 1px #fffbf1,
-                                        inset 0px 1px 2px #000,
-                                        inset 0px -1px 1px #fffbf1,
-                                        0px 1px 1px #000,
-                                        -1px 0px 2px #000,
-                                        inset 1px 0px 1px #fffbf1,
-                                        inset -1px 0px 2px #000,
-                                        1px 0px 1px #fffbf1;
-    box-shadow:     0px -1px 1px #fffbf1,
-                                inset 0px 1px 2px #000,
-                                inset 0px -1px 1px #fffbf1,
-                                0px 1px 1px #000,
-                                -1px 0px 2px #000,
-                                inset 1px 0px 1px #fffbf1,
-                                inset -1px 0px 2px #000,
-                                1px 0px 1px #fffbf1;
-
-    background: #d7d7d7; /* Old browsers */
-    background: -moz-radial-gradient(center, ellipse cover,  #d7d7d7 0%, #353535 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#d7d7d7), color-stop(100%,#353535)); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  #d7d7d7 0%,#353535 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  #d7d7d7 0%,#353535 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  #d7d7d7 0%,#353535 100%); /* IE10+ */
-    background: radial-gradient(center, ellipse cover,  #d7d7d7 0%,#353535 100%); /* W3C */
-
 }
 
 #resource-bar thead {
-    background: #3a3830; /* Old browsers */
-    background: -moz-radial-gradient(center, ellipse cover,  #3a3830 0%, #23221f 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#3a3830), color-stop(100%,#23221f)); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  #3a3830 0%,#23221f 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  #3a3830 0%,#23221f 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  #3a3830 0%,#23221f 100%); /* IE10+ */
-    background: radial-gradient(center, ellipse cover,  #3a3830 0%,#23221f 100%); /* W3C */
 }
 
 #resource-bar thead th {
+    /* internal styling - padding etc. */
+    padding: 3px 6px 3px 6px;
+
     font-weight: normal;
+    color: #fff;
 }
 
 #resource-bar tbody th,
 #resource-bar tbody td{
-    width: 98px;
-    border-right: 1px inset #444444;
-    border-bottom: 1px inset #444444;
 
     padding: 3px 6px 3px 6px;
-    background: transparent;
 
-    font-size: 11px;
+    font-size: 12px;
     font-weight: lighter;
     font-family: 'Trebuchet MS', Helvetica, sans-serif;
     text-align: right;
-    color: #a9a9a9;
-    -moz-text-shadow: -1px 1px 1px #222222, 1px -1px 1px #222222, 1px 1px 1px #222222, -1px -1px 1px #7b7354;
-    -webkit-text-shadow: -1px 1px 1px #222222, 1px -1px 1px #222222, 1px 1px 1px #222222, -1px -1px 1px #7b7354;
-    text-shadow: -1px 1px 1px #222222, 1px -1px 1px #222222, 1px 1px 1px #222222, -1px -1px 1px #7b7354;
-    filter: glow(color=#252525,strength=3);
+    color: #fff;
 }
 
 #resource-bar tbody th {
-    font-size: 12px;
-    font-weight: bolder;
+    background-color: #400000;
+}
+
+#resource-bar tbody td {
+    background-color: #1A1A1A;
 }
 
 #resource-bar thead th {
-    width: 98px;
-    border-right: 1px inset #141413;
-    border-bottom: 1px inset #141413;
-    background: transparent;
+    background-color: #400000;
 }
 
 
 #resource-bar .positive {
-    color: #8FA94A;
+    color: green;
 }
 
 #resource-bar .negative {
-    color: #d0aeae;
+    color: red;
 }
 
 .game-content form,
 .game-content h2 {
-    border: 2px solid;
-    border-left: 0px;
-    border-right: 0px;
-
     /* internal styling - padding etc. */
 
     /* colors */
-    border-color: #181818;
-
-    -moz-box-shadow: inset 0px 0px 6px #000,
-                     inset -3px 3px 3px 2px #545454;
-    -webkit-box-shadow: inset 0px 0px 6px #000,
-                        inset -3px 3px 3px  2px #545454;
-    box-shadow: inset 0px 0px 6px #000,
-                inset -3px 3px 3px 2px #545454;
-
     color: #fff;
-    -moz-text-shadow: -1px 1px 1px #000, 1px -1px 1px #69634D;
-    -webkit-text-shadow: -1px 1px 1px #000, 1px -1px 1px #69634D;
-    text-shadow: -1px 1px 1px #000, 1px -1px 1px #69634D;
+}
 
-    background: rgb(86, 83, 74); /* Old browsers */
-    background: -moz-radial-gradient(center, ellipse cover,  #d7d7d7 0%, #353535 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#d7d7d7), color-stop(100%,#353535)); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  #d7d7d7 0%,#353535 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  #d7d7d7 0%,#353535 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  #d7d7d7 0%,#353535 100%); /* IE10+ */
-    background: radial-gradient(center, ellipse cover,  #d7d7d7 0%,#353535 100%); /* W3C */
-
+.game-content h2 {
+    /* colors */
+    background-color: #000040;
 }
 
 .game-content h3 {
-    font-size: 24px;
+    font-size: 20px;
     color: #fff;
-    -moz-text-shadow: -1px 1px 1px #000, 1px -1px 1px #69634D;
-    -webkit-text-shadow: -1px 1px 1px #000, 1px -1px 1px #69634D;
-    text-shadow: -1px 1px 1px #000, 1px -1px 1px #69634D;
 }
 
 .game-content form {
     font-size: 12px;
     font-weight: bolder;
-    background: rgb(86, 83, 74); /* Old browsers */
-    background: -moz-radial-gradient(center, ellipse cover,  #706e62 0%, #353535 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#898989), color-stop(100%,#353535)); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  #706e62 0%,#353535 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  #706e62 0%,#353535 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  #706e62 0%,#353535 100%); /* IE10+ */
-    background: radial-gradient(center, ellipse cover,  #706e62 0%,#353535 100%); /* W3C */
-}
-
-.game-content form.no-visible-fields {
-    width: auto;
-    background: none;
-    border: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-
 }
 
 form ul.errorlist {
-    color: #e26f80;
+    color: red;
 }
 
 .game-content form.change-kingdom {
     /* typography */
-    font-family: KnightsQuestRegular;
-    font-size: 16px;
+    font-size: 14px;
+
+    background-color: #400000;
 }
 
 .game-content form.change-kingdom .change-kingdom-heading {
-    font-size: 30px;
-    filter: glow(color=#252525,strength=3);
-    line-height: 24px;
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.game-content form.change-kingdom .change-kingdom-nav a {
+    width: 80px;
+}
+
+.game-content form.change-kingdom #royal-commands {
+    border-top: 2px dotted #3B4041;
+}
+
+.game-content form.change-kingdom #royal-commands table tbody td {
+    font-weight: normal;
 }
 
 .game-content form.change-kingdom .change-kingdom-form {
-    font-size: 30px;
+    width: 210px;
+    font-size: 20px;
     color: #a9a9a9;
-    -moz-text-shadow: -1px 1px 1px #222222, 1px -1px 1px #222222, 1px 1px 1px #222222, -1px -1px 1px #7b7354;
-    -webkit-text-shadow: -1px 1px 1px #222222, 1px -1px 1px #222222, 1px 1px 1px #222222, -1px -1px 1px #7b7354;
-    text-shadow: -1px 1px 1px #222222, 1px -1px 1px #222222, 1px 1px 1px #222222, -1px -1px 1px #7b7354;
 }
 
 .game-content form.change-kingdom.change-kingdom-target {
-    border: 0px;
     border-top: 2px solid;
-    border-color: #555555;
-    -moz-box-shadow:    0px -1px 1px #fffbf1,
-                        inset 0px 1px 2px #000;
-    -webkit-box-shadow: 0px -1px 1px #fffbf1,
-                        inset 0px 1px 2px #000;
-    box-shadow:         0px -1px 1px #fffbf1,
-                        inset 0px 1px 2px #000;
-
+    border-color: #555;
 }
 
-input[type=text],
 form textarea,
 form input[type=text],
 form input[type=password] {
     border-width: 1px;
     border-color: #d7d7d7;
     padding-left: 3px;
-    font-family: KnightsQuestRegular;
-    font-size: 20px;
+    font-size: 12px;
     text-align: left;
 
-    -moz-box-shadow: inset 0px 0px 4px #7c4a14;
-    -webkit-box-shadow: inset 0px 0px 4px #7c4a14;
-    box-shadow: inset 0px 0px 6px #000;
-
-    color: #fff;
-    background: #3a3830; /* Old browsers */
-    background: -moz-radial-gradient(center, ellipse cover,  #3a3830 0%, #23221f 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#3a3830), color-stop(100%,#23221f)); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  #3a3830 0%,#23221f 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  #3a3830 0%,#23221f 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  #3a3830 0%,#23221f 100%); /* IE10+ */
-    background: radial-gradient(center, ellipse cover,  #3a3830 0%,#23221f 100%); /* W3C */
-
-
+    color: #000;
+    background: #fff;
 }
 
 form input[type=text],
 form input[type=password] {
-    height: 30px;
-    font-size: 30px;
+    height: 16px;
+    font-size: 12px;
 }
 
 form .errorlist {
@@ -768,62 +543,36 @@ form .errorlist {
 form input[type=submit],
 .button-link {
     /* positioning and size */
+    border: 1px solid;
+    padding: 3px 3px 3px 3px;
 
     /* border styling */
-    border: 1px solid;
     border-radius: 4px;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
 
-
     /* internal styling - padding etc. */
     /* typography */
-    font-family: KnightsQuestRegular;
-    font-size: 20px;
+    font-size: 12px;
     font-weight: normal;
-    -moz-text-shadow: -1px 1px 2px #3d2f1a, 1px -1px 2px #3d2f1a;
-    -webkit-text-shadow: -1px 1px 2px #3d2f1a, 1px -1px 2px #3d2f1a;
-    text-shadow: -1px 1px 2px #3d2f1a, 1px -1px 1px #3d2f1a;
 
     /* colors */
-    border-color: #7c551a;
-    -moz-box-shadow: 1px -1px 1px 0px #D4CAA8 , -1px 1px 2px #3d2f1a, inset 0px 0px 10px #000;
-    -webkit-box-shadow: 1px -1px 1px 0px #D4CAA8 , -1px 1px 2px #3d2f1a, inset 0px 0px 10px #000;
-    box-shadow: 1px -1px 1px 0px #D4CAA8 , -1px 1px 2px #3d2f1a, inset 0px 0px 10px #000;
+    background-color: #D8D8D8;
 
-    background: #9c7815; /* Old browsers */
-    background: -moz-radial-gradient(center, ellipse cover,  #E5C40F 0%, #7c551a 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#E5C40F ), color-stop(100%,#7c551a)); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  #E5C40F  0%,#7c551a 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  #E5C40F  0%,#7c551a 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  #E5C40F  0%,#7c551a 100%); /* IE10+ */
-    background: radial-gradient(center, ellipse cover,  #E5C40F  0%,#7c551a 100%); /* W3C */
-
-    color: #fff;
+    color: #000;
 }
 
 form input[type=submit]:hover,
 .button-link:hover {
     /* colors */
-    background: #c99a1a;
-    background: -moz-radial-gradient(center, ellipse cover,  #ead464 0%, #775f3a 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#ead464 ), color-stop(100%,#775f3a)); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  #ead464  0%,#775f3a 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  #ead464  0%,#775f3a 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  #ead464  0%,#775f3a 100%); /* IE10+ */
-    background: radial-gradient(center, ellipse cover,  #ead464  0%,#775f3a 100%); /* W3C */
+    background-color: #F2F2F2;
+    text-decoration: none;
 }
 
 form input[type=submit]:active,
 .button-link:active {
     /* colors */
-    background: #ba8500;
-    background: -moz-radial-gradient(center, ellipse cover,  #fceea6 0%, #9b7e52 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#fceea6 ), color-stop(100%,#9b7e52)); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  #fceea6  0%,#9b7e52 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  #fceea6  0%,#9b7e52 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  #fceea6  0%,#9b7e52 100%); /* IE10+ */
-    background: radial-gradient(center, ellipse cover,  #fceea6  0%,#9b7e52 100%); /* W3C */
+    background-color: #F2F2F2;
 }
 
 div.selector span,
@@ -832,52 +581,36 @@ div.uploader span.action
 {
     padding-left: 5px;
     /* typography */
-    font-family: KnightsQuestRegular;
-    font-size: 20px;
+    font-size: 12px;
     font-weight: normal;
     text-align: left;
-    -moz-text-shadow: -1px 1px 2px #3d2f1a, 1px -1px 2px #3d2f1a;
-    -webkit-text-shadow: -1px 1px 2px #3d2f1a, 1px -1px 2px #3d2f1a;
-    text-shadow: -1px 1px 2px #3d2f1a, 1px -1px 1px #3d2f1a;
 }
 div.uploader span.filename,
 div.uploader span.action
 {
-    font-size: 18px;
+    font-size: 12px;
+}
+
+div.uploader span.action {
+    background: transparent;
+    color: #000;
 }
 
 .game-content form table {
-    border: 0px;
-    border-top: 2px solid;
-    border-color: #555555;
     margin-bottom: 10px;
-    -moz-box-shadow:    0px -1px 1px #fffbf1,
-                        inset 0px 1px 2px #000;
-    -webkit-box-shadow: 0px -1px 1px #fffbf1,
-                        inset 0px 1px 2px #000;
-    box-shadow:         0px -1px 1px #fffbf1,
-                        inset 0px 1px 2px #000;
 
     text-align: left;
-
 }
 
 .game-content form table thead th {
-    height: 36px;
-
-    font-family: KnightsQuestRegular;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 14px;
     text-align: center;
     text-decoration: none;
     vertical-align: bottom;
 }
 
 .game-content form tbody th {
-    border-left: 2px ridge rgba(48, 48, 48, 0.4);
-    font-family: KnightsQuestRegular;
-    font-size: 20px;
-
 }
 
 .game-content form tbody th:first-child {
@@ -896,33 +629,7 @@ div.uploader span.action
 .game-content form tbody tr:nth-child(even) {
     /* display, opacity and special effects*/
     background: rgb(48, 48, 48);
-    background: rgba(48, 48, 48, 0.1);
-
-}
-
-
-.game-content form.change-kingdom #royal-commands {
-    border-top: 2px dotted #000;
-}
-
-.game-content form.change-kingdom #royal-commands table {
-    border-top: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-
-.game-content form.change-kingdom #royal-commands table tbody td,
-.game-content form.change-kingdom #royal-commands input[type=text] {
-    font-family: 'Trebuchet MS', Helvetica, sans-serif;
-    font-size: 13px;
-    font-weight: normal;
-}
-
-
-.game-content form.change-kingdom #royal-commands .button-link {
-    font-size: 16px;
-    line-height: 20px;
+    background: rgba(48, 48, 48, 0.6);
 }
 
 /* KINGDOM NEWS */
@@ -994,8 +701,7 @@ td.news-province-modification {
 }
 
 .provinces-legend .invitations {
-    font-family: KnightsQuestRegular;
-    font-size: 18px;
+    font-size: 1.2em;
 }
 
 .dip-status
@@ -1055,7 +761,7 @@ td.news-province-modification {
     background: url('./images/province_profile/flagpole.png') no-repeat;
 }
 
-.province-flag .flag-image .default-flag {
+.province-flag .flag-image .default-flag{
     background: url('./images/province_profile/default_flag.png') no-repeat;
 }
 
@@ -1066,75 +772,45 @@ td.news-province-modification {
 
 .game-header
 {
-    height: 30px;
-    border-top: 2px solid #6b6348;
-    border-bottom: 2px solid #6b6348;
-    background: #655e44; /* Old browsers */
-    background: -moz-radial-gradient(center, ellipse cover,  #d4caa8 0%, #45402e 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#d4caa8), color-stop(100%,#45402e)); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  #d4caa8 0%,#45402e 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  #d4caa8 0%,#45402e 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  #d4caa8 0%,#45402e 100%); /* IE10+ */
-    background: radial-gradient(center, ellipse cover,  #d4caa8 0%,#45402e 100%); /* W3C */
+    height: 25px;
 }
 
 .game-header h1
 {
-    height: 22px;
-    margin: 0px 1px;
-    padding: 6px 4px 1px 4px;
+    height: 20px;
+    margin: 0px 2px;
+    padding: 6px 6px 1px 6px;
 
-    font-size: 24px;
+    font-size: 14px;
     text-decoration: none;
-    font-family: KnightsQuestRegular;
-    -moz-text-shadow: 1px -1px 1px #908661;
-    -webkit-text-shadow: 1px -1px 1px #908661;
-    text-shadow: 1px -1px 1px #908661;
-    filter: glow(color=#252525,strength=3);
 
-    -moz-box-shadow: 1px 1px 1px 1px #6d664a;
-    -webkit-box-shadow: 1px 1px 1px 1px #6d664a;
-    box-shadow: 1px 1px 1px 1px #6d664a;
+    -moz-box-shadow: -1px -1px 1px 1px #788183;
+    -webkit-box-shadow: -1px -1px 1px 1px #788183;
+    box-shadow: -1px -1px 1px 1px #788183;
 
-    background: #c4bea9; /* Old browsers */
-    background: -moz-linear-gradient(top,  #908661 0%, #c4bea9 15%, #f9f9f9 33%, #f9f9f9 65%, #c4bea9 84%, #908661 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#908661), color-stop(15%,#c4bea9), color-stop(33%,#f9f9f9), color-stop(65%,#f9f9f9), color-stop(84%,#c4bea9), color-stop(100%,#908661)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #908661 0%,#c4bea9 15%,#f9f9f9 33%,#f9f9f9 65%,#c4bea9 84%,#908661 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #908661 0%,#c4bea9 15%,#f9f9f9 33%,#f9f9f9 65%,#c4bea9 84%,#908661 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #908661 0%,#c4bea9 15%,#f9f9f9 33%,#f9f9f9 65%,#c4bea9 84%,#908661 100%); /* IE10+ */
-    background: linear-gradient(top,  #908661 0%,#c4bea9 15%,#f9f9f9 33%,#f9f9f9 65%,#c4bea9 84%,#908661 100%); /* W3C */
+    background: #3B4041; /* Old browsers */
 
-    color: #000;
-
+    color: #fff;
 }
 
 .game-header a h1 {
-    background: #494432; /* Old browsers */
-    background: -moz-linear-gradient(top,  #29261c 0%, #494432 15%, #7b7354 45%, #7b7354 55%, #494432 84%, #29261c 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#29261c), color-stop(15%,#494432), color-stop(45%,#7b7354), color-stop(55%,#7b7354), color-stop(84%,#494432), color-stop(100%,#29261c)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #29261c 0%,#494432 15%,#7b7354 45%,#7b7354 55%,#494432 84%,#29261c 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #29261c 0%,#494432 15%,#7b7354 45%,#7b7354 55%,#494432 84%,#29261c 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #29261c 0%,#494432 15%,#7b7354 45%,#7b7354 55%,#494432 84%,#29261c 100%); /* IE10+ */
-    background: linear-gradient(top,  #29261c 0%,#494432 15%,#7b7354 45%,#7b7354 55%,#494432 84%,#29261c 100%); /* W3C */
+    color: silver;
+    background: #222526; /* Old browsers */
+}
+
+.game-header a:hover {
+    text-decoration: none;
 }
 
 .game-header a h1:hover
 {
-    -moz-text-shadow: none;
-    -webkit-text-shadow: none;
-    text-shadow: none;
-
-    background: #29261c; /* Old browsers */
-    background: -moz-linear-gradient(top,  #29261c 0%, #494432 15%, #7b7354 45%, #7b7354 55%, #494432 84%, #29261c 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#29261c), color-stop(15%,#494432), color-stop(45%,#7b7354), color-stop(55%,#7b7354), color-stop(84%,#494432), color-stop(100%,#29261c)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #29261c 0%,#494432 15%,#7b7354 45%,#7b7354 55%,#494432 84%,#29261c 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #29261c 0%,#494432 15%,#7b7354 45%,#7b7354 55%,#494432 84%,#29261c 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #29261c 0%,#494432 15%,#7b7354 45%,#7b7354 55%,#494432 84%,#29261c 100%); /* IE10+ */
-    background: linear-gradient(top,  #29261c 0%,#494432 15%,#7b7354 45%,#7b7354 55%,#494432 84%,#29261c 100%); /* W3C */
+    background: #3B4041; /* Old browsers */
 
     color: #fff;
-    box-shadow: 0px 5px 3px -3px #fff;
 
+    -moz-box-shadow: -1px -1px 1px 1px #B5B9BA;
+    -webkit-box-shadow: -1px -1px 1px 1px #B5B9BA;
+    box-shadow: -1px -1px 1px 1px #B5B9BA;
 }
 
 .game-content {
@@ -1145,83 +821,26 @@ td.news-province-modification {
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
 
-
     /* colors */
-    border-color: #555555;
-    -moz-box-shadow:    0px -1px 1px #fffbf1,
-                                    inset 0px 1px 2px #000,
-                                    inset 0px -1px 1px #fffbf1,
-                                    0px 1px 1px #000,
-                                    -1px 0px 2px #000,
-                                    inset 1px 0px 1px #fffbf1,
-                                    inset -1px 0px 2px #000,
-                                    1px 0px 1px #fffbf1;
-    -webkit-box-shadow: 0px -1px 1px #fffbf1,
-                                        inset 0px 1px 2px #000,
-                                        inset 0px -1px 1px #fffbf1,
-                                        0px 1px 1px #000,
-                                        -1px 0px 2px #000,
-                                        inset 1px 0px 1px #fffbf1,
-                                        inset -1px 0px 2px #000,
-                                        1px 0px 1px #fffbf1;
-    box-shadow:     0px -1px 1px #fffbf1,
-                                inset 0px 1px 2px #000,
-                                inset 0px -1px 1px #fffbf1,
-                                0px 1px 1px #000,
-                                -1px 0px 2px #000,
-                                inset 1px 0px 1px #fffbf1,
-                                inset -1px 0px 2px #000,
-                                1px 0px 1px #fffbf1;
+    border-color: #3B4041;
 }
 
 .game-content h2 {
-    margin-top: 20px;
-    border: 0px;
-    border-top: 2px solid;
-    border-bottom: 2px solid;
-    border-color: #555555;
-    -moz-box-shadow:    0px -1px 1px #fffbf1,
-                                    inset 0px 1px 2px #000,
-                                    inset 0px -1px 1px #fffbf1,
-                                    0px 1px 1px #000;
-    -webkit-box-shadow: 0px -1px 1px #fffbf1,
-                                    inset 0px 1px 2px #000,
-                                    inset 0px -1px 1px #fffbf1,
-                                    0px 1px 1px #000;
-    box-shadow:         0px -1px 1px #fffbf1,
-                                    inset 0px 1px 2px #000,
-                                    inset 0px -1px 1px #fffbf1,
-                                    0px 1px 1px #000;
+    margin-top: 15px;
 
-    line-height: 30px;
-    font-size: 30px;
-
+    line-height: 20px;
+    font-size: 14px;
 }
 
-
 .game-content thead th {
-    font-family: KnightsQuestRegular;
     font-weight: normal;
-    font-size: 18px;
-
-    -moz-text-shadow: -1px 1px 2px #000, 1px -1px 2px #ffcf68;
-    -webkit-text-shadow: -1px 1px 2px #000, 1px -1px 2px #ffcf68;
-    text-shadow: -1px 1px 2px #000, 1px -1px 1px #ffcf68;
-
-    background: #3a3830; /* Old browsers */
-    background: -moz-radial-gradient(center, ellipse cover,  #3a3830 0%, #23221f 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#3a3830), color-stop(100%,#23221f)); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  #3a3830 0%,#23221f 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  #3a3830 0%,#23221f 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  #3a3830 0%,#23221f 100%); /* IE10+ */
-    background: radial-gradient(center, ellipse cover,  #3a3830 0%,#23221f 100%); /* W3C */
+    font-size: 12px;
+    color : #fff;
+    background-color: #000040;
 }
 
 .game-content tbody th {
-    border-left: 6px ridge rgba(48, 48, 48, 0.4);
-    font-family: KnightsQuestRegular;
-    font-size: 18px;
-
+    color: silver;
 }
 
 .game-content tbody th:first-child {
@@ -1232,17 +851,17 @@ td.news-province-modification {
     padding-right: 20px;
 }
 
-.game-content tbody tr {
-    border-bottom: 2px groove rgba(48, 48, 48, 0.4);
-    border-top: 2px groove rgba(48, 48, 48, 0.4);
+.game-content tbody td.forum-moderator-buttons {
+    padding-right: 10px;
+}
 
+.game-content tbody tr {
 }
 
 .game-content tbody tr:nth-child(even) {
     /* display, opacity and special effects*/
     background: rgb(48, 48, 48);
     background: rgba(48, 48, 48, 0.6);
-
 }
 
 .game-content tbody tr.sub-total {
@@ -1254,67 +873,45 @@ td.news-province-modification {
     padding-bottom: 25px;
 }
 
-
 .game-content table.schedule
 {
     font-size:0.8em;
+    border-collapse: separate;
+    border-spacing: 3px 3px;
 }
-
 
 .two-digit-input {
-    width: 50px;
+    width: 30px;
 }
 .three-digit-input {
-    width: 55px;
+    width: 40px;
 }
 
 .four-digit-input {
-    width: 70px;
+    width: 50px;
 }
 
 .five-digit-input {
-    width: 85px;
+    width: 60px;
 }
 
 .six-digit-input {
-    width: 100px;
+    width: 70px;
 }
 
 /* GAME PREFERENCES */
 .game-content div.preference-box {
-    background: rgb(86, 83, 74); /* Old browsers */
-    background: -moz-radial-gradient(center, ellipse cover,  #706e62 0%, #353535 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#898989), color-stop(100%,#353535)); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  #706e62 0%,#353535 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  #706e62 0%,#353535 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  #706e62 0%,#353535 100%); /* IE10+ */
-    background: radial-gradient(center, ellipse cover,  #706e62 0%,#353535 100%); /* W3C */
+    background-color: #400000;
 }
 
 .game-content div.preference-box.disabled {
-    opacity: 0.5;
-}
-
-.game-content table.applicant-view input[type="submit"],
-.game-content table.mail-view input[type="submit"],
-.game-content table.mail-view .button-link {
-    font-size: 14px;
-}
-
-table.mail-view td.formatted-text {
-    background: rgb(86, 83, 74); /* Old browsers */
-    background: -moz-radial-gradient(center, ellipse cover,  #706e62 0%, #353535 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#898989), color-stop(100%,#353535)); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  #706e62 0%,#353535 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  #706e62 0%,#353535 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  #706e62 0%,#353535 100%); /* IE10+ */
-    background: radial-gradient(center, ellipse cover,  #706e62 0%,#353535 100%); /* W3C */
+    background-color: #444;
 }
 
 div.wysiwyg {
     border: 1px solid #999;
     padding: 5px;
-    background: rgb(86, 83, 74);
+    background: rgb(83, 83, 83);
 }
 
 div.wysiwyg ul.toolbar li {
@@ -1324,12 +921,12 @@ div.wysiwyg ul.toolbar li {
 
 body.wysiwyg {
     color: #fff;
-    background: #3a3830; /* Old browsers */
+    background: #2B3849; /* Old browsers */
     font-size: 12px;
 }
 
 #bookmark-header {
-    background-image: url(./images/gold_star.png);
+    background-image: url(./images/silver_star.png);
     background-repeat: no-repeat;
     background-position: center 3px;
 }
@@ -1337,41 +934,36 @@ body.wysiwyg {
 #bookmark-header:hover,
 #bookmark-header.selected
 {
-    background-color: #494432;
+    background-color: #103041;
 }
 
 #bookmark-details
 {
-    font-size: 16px;
+    font-size: 12px;
+    background-color: black;
 }
 
-#bookmark-details div
+#bookmark-details a
 {
-    padding-top: 1px;
-    padding-bottom: 1px;
-}
-
-#bookmark-details a:hover {
-    box-shadow: -10px 0px 6px -6px #fff;
+    text-decoration: none;
 }
 
 #bookmark-details #bookmarks {
-    border-top: 1px solid #29261c;
-    border-bottom: 1px solid #29261c;
-    -moz-box-shadow: 0px 2px 1px -1px #7b7354;
-    -webkit-box-shadow: 0px 2px 1px -1px #7b7354;
-    box-shadow: 0px 2px 1px -1px #7b7354;
-
+    border-top: 1px solid #103041;
+    border-bottom: 1px solid #103041;
+    -moz-box-shadow: 0px 2px 1px -1px #103041;
+    -webkit-box-shadow: 0px 2px 1px -1px #103041;
+    box-shadow: 0px 2px 1px -1px #103041;
 }
 
 #royal-command-icon {
-    background-image: url(./images/gold_crown.png);
+    background-image: url(./images/silver_crown.png);
     background-repeat: no-repeat;
     background-position: center 3px;
 }
 
 #royal-command-icon:hover {
-    background-color: #494432;
+    background-color: #103041;
 }
 
 .tablesorter th .order-icon {
@@ -1387,60 +979,48 @@ body.wysiwyg {
 }
 
 .campaign-meter-level div {
-    border: 1px solid #789316;
+    border: 1px solid green;
 }
 
 .campaign-meter-level div.full {
-    background-color: #789316;
+    background-color: green;
 }
 
 .campaign-meter-level div.unknown {
-    color: #789316;
+    color: green;
 }
 
 .fails-criteria div {
-    border: 1px solid #CD4331;
+    border: 1px solid red;
 }
 
 .fails-criteria div.full {
-    background-color: #CD4331;
+    background-color: red;
+}
+
+.two-column ul {
+   margin-left: 0px;
+}
+
+.two-column li {
+    margin-right: 10px;
+}
+
+.recruitment-header h2 {
+    font-size: 16px;
 }
 
 .recruitment-header .rank-bar,
 .campaigns .rank-bar {
-    background-color: #867721;
+    background-color: #04B404;
 }
 
 .recruitment-header .selected-rank,
 .campaigns .selected-rank {
-    background-color: #E5C40F;
+    background-color: #40FF00;
 }
 
 .campaigns .campaign-message-intro {
-    font-family: KnightsQuestRegular;
-    font-weight: 200;
-    color: white;
-    text-shadow: -1px 1px 2px black;
-    font-size: 18px;
+    font-size: 14px;
 }
-
-#uniform-id-orderby {
-    background-position: left -38px;
-    width: 296px;
-}
-
-#uniform-id-orderby span,
-#uniform-id-orderby.focus span,
-#uniform-id-orderby.hover span,
-#uniform-id-orderby:hover span {
-    font-size: 30px;
-    background-position: right -38px;
-}
-
-td#inline-hostility-meter {
-    text-align: left;
-    text-shadow: none;
-    font-weight: normal;
-}
-
 
