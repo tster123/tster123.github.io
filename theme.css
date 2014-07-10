@@ -16,16 +16,22 @@ FOLLOW THIS FORMAT:
 
 
 
-.game-content p
+.game-content>p
 {
 	font-size: 0;
 	margin: 0;
+	
 }
 
-.game-content p a
+.game-content>p>a
 {
-	display: block;
+	display: inline-block;
 	font-size: 13px;
+	margin-right: 5px;
+	border-right: gray;
+	border-right-width: thin;
+	border-right-style: ridge;
+	padding-right: 5px;
 }
 
 
