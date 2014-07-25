@@ -37,7 +37,7 @@ FOLLOW THIS FORMAT:
 	display: inline;
 	font-size: 13px;
 }
-.game-content>p.page-summary
+.game-content>p.page-summary,.game-content>p.advice-message
 {
 	font-size: 13px;
 	margin: 1em;
